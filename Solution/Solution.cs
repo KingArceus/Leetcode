@@ -1,4 +1,5 @@
-﻿using Utils;
+﻿global using Utils;
+
 namespace Problem
 {
     public class Solution

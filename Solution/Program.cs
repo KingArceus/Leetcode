@@ -1,5 +1,4 @@
 ﻿using Problem;
-using Utils;
 
 Solution sol = new Solution();
 List<int> list1 = [9, 9, 9, 9, 9, 9, 9];
