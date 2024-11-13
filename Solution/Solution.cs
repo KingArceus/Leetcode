@@ -49,5 +49,31 @@ namespace Problem
 
             return result;
         }
+
+        public static long CountFairPairs(int[] nums, int lower, int upper)
+        {
+            Array.Sort(nums);
+
+            var count = (int target) =>
+            {
+                long ret = 0;
+
+                int i = 0;
+                int j = nums.Length - 1;
+                while (i < j)
+                {
+                    if (nums[i] + nums[j] > target) j--;
+                    else
+                    {
+                        ret += j - i;
+                        i++;
+                    };
+                }
+
+                return ret;
+            };
+
+            return count(upper) - count(lower - 1);
+        }
     }
 }
